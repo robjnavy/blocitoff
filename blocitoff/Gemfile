@@ -5,6 +5,11 @@ source 'https://rubygems.org'
  
  gem 'devise'
  
+ gem 'bootstrap-sass'
+ gem "font-awesome-rails"
+ gem 'adminlte-rails'
+ gem 'adminlte2-rails'
+ 
  # #1
  group :production do
    gem 'pg'
