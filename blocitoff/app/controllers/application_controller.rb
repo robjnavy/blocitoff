@@ -5,12 +5,12 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   
   def layout
-
 			if !user_signed_in?
 				#return "devise_layout"
-				return "../devise/sessions/new"
+
+				    return "../welcome/index"
 			else
-				return "application"
+				return "../dashboard/index"
 			end
-		end
+  end
 end

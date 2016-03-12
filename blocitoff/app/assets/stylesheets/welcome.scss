@@ -1,0 +1,23 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#jumbo {
+  position: relative; /* or absolute */
+  top: 25px;
+  left: 175px;
+}
+#picture {
+  position: relative; /* or absolute */
+  bottom: 170px;
+  right: 175px;
+}
+#firststatement {
+  position: relative; /* or absolute */
+  
+  left: 250px;
+}
+#secondstatement {
+  position: relative; /* or absolute */
+  
+  bottom: 75px;
+}
