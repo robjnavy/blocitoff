@@ -2,22 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #jumbo {
-  position: relative; /* or absolute */
-  top: 25px;
-  left: 175px;
+  position: absolute;
+    top:0%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+    max-width: 1000px; 
+    max-height: 500px;
 }
+
 #picture {
-  position: relative; /* or absolute */
-  bottom: 170px;
-  right: 175px;
+  position: absolute;
+
 }
+
 #firststatement {
-  position: relative; /* or absolute */
-  
-  left: 250px;
+  position: absolute;
+  top: 300px;
+  left: 1000px;
+
 }
-#secondstatement {
-  position: relative; /* or absolute */
-  
-  bottom: 75px;
-}
+
+

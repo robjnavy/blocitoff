@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  
+
   get '/', to: 'welcome#index'
   devise_for :users
   authenticate :user do
     root 'dashboard#index'
     resources :dashboard
+    resources :items
+    get 'input_task' => 'dashboard#new'
     
   end
   # The priority is based upon order of creation: first created -> highest priority.

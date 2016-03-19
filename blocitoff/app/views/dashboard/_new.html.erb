@@ -1,0 +1,24 @@
+<br>
+<br>
+<br>
+<div class="login-box" style="max-width: 500px;" id="login-box">
+    <div class="login-logo">
+      <a href="#"><b>B</b>loc<b>I</b>t<b>O</b>ff Task Creator</a>
+    </div>
+    <br>
+    <div class="login-box-body">
+        <%= form_tag("/input_task", method: "get") do %>
+          <%= label_tag(:q, "Completion Date:") %>
+          <%= select_year(Time.now) %>
+          <%= select_month(Time.now) %>
+          <%= select_day(Time.now) %>
+          <br>
+          <br>
+          <%= label_tag(:q, "Description:") %>
+          <%= text_area_tag(:q) %>
+          <br>
+          <br>
+          <%= submit_tag("Create") %>
+        <% end %>
+    </div>
+</div>

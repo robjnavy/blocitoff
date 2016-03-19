@@ -13,4 +13,8 @@ class ApplicationController < ActionController::Base
 				return "../dashboard/index"
 			end
   end
+  
+  def after_sign_in_path_for(resource)
+  dashboard_index_path #or whatever path helper you need
+  end
 end
