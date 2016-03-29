@@ -5,3 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+require "faker"
+
+20.times do
+    Item.create!(
+        
+        description: Faker::Beer.style,
+        completion_date: Faker::Date.between_except(1.year.ago, 1.year.from_now, Date.today),
+        user_id: 1
+        
+        )
+end
