@@ -20,7 +20,8 @@
                   <% @items.each do |item| %>
                     <tr>
                       <td><%= item.description %></td>
-                      <td><%= item.completion_date.strftime('%b %e, %l:%M %p') %></td>
+                      <% @days_left = distance_of_time_in_words_to_now(item.completion_date) %>
+                      <td><%= @days_left %></td>
                       <td><%= item.completed %></td>
                     </tr>
                   <% end %>
