@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   devise_for :users
   authenticate :user do
     root 'dashboard#index'
-    resources :dashboard
-    resources :items
+    resources :dashboard, only: [:index]
+    resources :items do
+      put :toggle
+    end
     get 'input_task' => 'dashboard#new'
     
   end

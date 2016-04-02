@@ -22,7 +22,7 @@
                       <td><%= item.description %></td>
                       <% @days_left = distance_of_time_in_words_to_now(item.completion_date) %>
                       <td><%= @days_left %></td>
-                      <td><%= item.completed %></td>
+                      <td><%= link_to "", item_toggle_path(item), method: :put, class: 'glyphicon glyphicon-ok' %></td>
                     </tr>
                   <% end %>
                 </tbody>

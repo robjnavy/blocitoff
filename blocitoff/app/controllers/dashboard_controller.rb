@@ -2,7 +2,7 @@ class DashboardController < ApplicationController
   before_action :authenticate_user!
   
   def index
-    @items = Item.all
+    @items = Item.where(completed: false)
   end
   
   def new
@@ -19,6 +19,11 @@ class DashboardController < ApplicationController
     user.items.create(:description => description, :completion_date => realdate )
     
     
+    render 'dashboard/index'
+  end
+  
+  def destroy
+    puts params
     render 'dashboard/index'
   end
 end
